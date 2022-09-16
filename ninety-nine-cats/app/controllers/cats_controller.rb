@@ -27,13 +27,13 @@ class CatsController < ApplicationController
 
     def update
         @cat = Cat.find_by(id: params[:id])
-        if @cat.update
-            # render :show
-            render json: @cat
+        if @cat.update(cat_params)
+            render :show
+            # render json: @cat
 
         else
-            # render :edit
-            render json: ['did not work']
+            render :edit
+            # render json: ['did not work']
         end
     end
 
