@@ -1,5 +1,12 @@
 <h1>All the cats in the world! </h1>
 <%@cats.each do |cat|%>
- <p><%= render 'cat', cat: cat, type: 'index'%></p>
+    <p><%= cat.name%></p>
+    <ul> 
+        <li><%= cat.birth_date%></li>
+        <li><%= cat.color%></li>
+        <li><%= cat.sex%></li>
+        <li><%= cat.description%></li>
+        <li><a href="<%= cat_url(cat) %>">Inspect cat</a> </li>
+    </ul>
  <%end%>
 
