@@ -1,0 +1,13 @@
+<p><%= cat.name%></p>
+<ul> 
+    <li><%= cat.birth_date%></li>
+    <li><%= cat.color%></li>
+    <li><%= cat.sex%></li>
+    <li><%= cat.description%></li>
+    <%if type == 'index' %>
+        <li><a href="<%= cat_url(cat) %>">Inspect cat</a> </li>
+    <%else%>
+        <li><a href="<%= cats_url %>">Back to all cats page</a> </li>
+    <%end%>
+</ul>
+

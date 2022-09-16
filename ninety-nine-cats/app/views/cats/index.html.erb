@@ -1,0 +1,5 @@
+<h1>All the cats in the world! </h1>
+<%@cats.each do |cat|%>
+ <p><%= render 'cat', cat: cat, type: 'index'%></p>
+ <%end%>
+

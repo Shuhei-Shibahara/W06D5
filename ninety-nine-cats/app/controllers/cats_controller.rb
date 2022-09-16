@@ -2,18 +2,18 @@ class CatsController < ApplicationController
 
     def index
         @cats = Cat.all
-        # render :index
-        render json: @cats
+        render :index
+        # render json: @cats
     end
 
     def show
         @cat = Cat.find_by(id: params[:id])
-        # render :show
-        render json: @cat
+        render :show
+        # render json: @cat
     end
 
     def create
-        debugger
+        # debugger
         @cat = Cat.new(cat_params)
 
         if @cat&.save
