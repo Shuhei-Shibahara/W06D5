@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   # root "articles#index"
 
 
-  resources :cats, except: [:destroy]
+  resources :cats, only: [:index, :create, :show, :new, :edit, :update]
   
 end
