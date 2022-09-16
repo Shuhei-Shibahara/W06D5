@@ -843,3 +843,88 @@ Processing by CatsController#show as HTML
 Completed 200 OK in 17ms (Views: 12.3ms | ActiveRecord: 0.4ms | Allocations: 3423)
 
 
+Started GET "/" for ::1 at 2022-09-16 16:32:03 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/shoehey02/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/shoehey02/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.8ms | Allocations: 474)
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 3267)
+
+
+Started GET "/" for ::1 at 2022-09-16 16:32:07 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/shoehey02/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/shoehey02/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.8ms | Allocations: 281)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 962)
+
+
+Started GET "/cats" for ::1 at 2022-09-16 16:32:17 -0700
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:2
+  Rendered cats/index.html.erb within layouts/application (Duration: 18.8ms | Allocations: 7207)
+  Rendered layout layouts/application.html.erb (Duration: 41.1ms | Allocations: 28647)
+Completed 200 OK in 46ms (Views: 34.0ms | ActiveRecord: 8.5ms | Allocations: 30505)
+
+
+Started GET "/cats/new" for ::1 at 2022-09-16 16:33:52 -0700
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 0.5ms | Allocations: 399)
+  Rendered cats/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 658)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 2065)
+Completed 200 OK in 9ms (Views: 2.7ms | ActiveRecord: 3.2ms | Allocations: 5837)
+
+
+Started POST "/cats" for ::1 at 2022-09-16 16:34:55 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"birth_date"=>"2012-07-04", "color"=>"blue", "name"=>"Firework", "sex"=>"F", "description"=>""}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:19:in `create'
+  [1m[36mCat Create (0.6ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2012-07-04"], ["color", "blue"], ["name", "Firework"], ["sex", "F"], ["description", ""], ["created_at", "2022-09-16 23:34:55.226603"], ["updated_at", "2022-09-16 23:34:55.226603"]]
+  ↳ app/controllers/cats_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cats_controller.rb:19:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/_cat.html.erb (Duration: 0.4ms | Allocations: 281)
+  Rendered cats/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 513)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1865)
+Completed 200 OK in 12ms (Views: 2.8ms | ActiveRecord: 5.7ms | Allocations: 6409)
+
+
+Started GET "/cats" for ::1 at 2022-09-16 16:34:59 -0700
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:2
+  Rendered cats/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1263)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 2404)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.5ms | Allocations: 2692)
+
+
+Started GET "/cats" for ::1 at 2022-09-16 16:35:55 -0700
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:2
+  Rendered cats/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1518)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3072)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.5ms | Allocations: 3830)
+
+
+Started GET "/cats/new" for ::1 at 2022-09-16 16:36:00 -0700
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 1.2ms | Allocations: 350)
+  Rendered cats/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 552)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 1713)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 2031)
+
+

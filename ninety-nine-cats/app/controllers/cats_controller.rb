@@ -17,11 +17,11 @@ class CatsController < ApplicationController
         @cat = Cat.new(cat_params)
 
         if @cat&.save
-            # render :show
-            render json: @cat
+            render :show
+            # render json: @cat
         else
-            # render :new
-            render json: ['did not work']
+            render :new
+            # render json: ['did not work']
         end
     end
 
