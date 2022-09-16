@@ -13,6 +13,7 @@ class CatsController < ApplicationController
     end
 
     def create
+        debugger
         @cat = Cat.new(cat_params)
 
         if @cat&.save
@@ -49,7 +50,7 @@ class CatsController < ApplicationController
 
     private
     def cat_params
-        params.require(:cat).permits(:birth_date, :name, :color, :sex, :description)
+        params.require(:cat).permit(:birth_date, :name, :color, :sex, :description)
     end
 end
 
